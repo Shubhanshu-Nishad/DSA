@@ -1,7 +1,7 @@
 package Opps;
 
 public class stack {
-	protected private int[] data;
+	protected int[] data;
 	private int top = -1;
 	public stack() {
 		this.data = new int[5];

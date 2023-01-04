@@ -19,5 +19,6 @@ public class DynamicStack extends stack{
 		ds.push(30);
 		ds.push(40);
 		ds.push(50);
+		ds.display();
 	}
 }

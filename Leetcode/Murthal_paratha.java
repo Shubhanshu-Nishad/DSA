@@ -51,9 +51,9 @@ public class Murthal_paratha {
 					time=0;
 					pn=1;
 				}
-				if(parantha>=nop) {
+				
+				if(parantha>=nop) 
 					return true;
-				}
 				
 			}
 			return false;
