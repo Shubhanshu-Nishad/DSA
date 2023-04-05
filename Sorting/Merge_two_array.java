@@ -1,4 +1,4 @@
-package Sorting;
+	package Sorting;
 
 public class Merge_two_array {
 

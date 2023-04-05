@@ -1,8 +1,8 @@
 package LinkedList;
 
-public class LinkedList {
-	
-	private  class Node{
+
+public class Create_Cycle {
+	class Node{
 		int val;
 		Node next;
 	}
@@ -128,10 +128,44 @@ public class LinkedList {
 		}
 	}
 	
-	public static void  main(String[] args) {
-		LinkedList ll = new LinkedList();
-		ll.addFirst(2);
-		ll.display();
+	public void CreateCycle() throws Exception{
+		tail.next = GetNode(3);
+	}
+	
+	public boolean hascycle() {
+		Node fast = head;
+	    Node slow = head;
+	    while(fast !=null && fast.next !=null) {
+	    	slow = slow.next;
+	    	fast = fast.next.next;
+	    	if(slow == fast )
+	    		return true;
+	    }
+	    return false;
+	}
+	
+	public Node meetingPoint() {
+		Node fast = head;
+	    Node slow = head;
+	    while(fast !=null && fast.next !=null) {
+	    	slow = slow.next;
+	    	fast = fast.next.next;
+	    	if(slow == fast )
+	    		return slow;
+	    }
+	    return null;
+	}
+	
+	public void FloydCycleremovel() {
+		Node slow = meetingPoint();
+		if(slow == null)
+			return;
+		Node fast = this.head;
+		while(slow.next != fast.next) {
+			slow = slow.next;
+			fast = fast.next;
+		}
+		fast.next=null;
 	}
 	
 }
